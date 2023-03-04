@@ -16,7 +16,9 @@ function getArrayParams(...arr) {
 }
 
 function summElementsWorker(...arr) {
-
+  return arr.reduce(function(sum, i) {
+    return sum + i;
+  })
 }
 
 function differenceMaxMinWorker(...arr) {
