@@ -30,11 +30,31 @@ function differenceMaxMinWorker(...arr) {
 
 function differenceEvenOddWorker(...arr) {
   let sumEvenElement = 0;
-  let sumOddElemtnt = 0;
+  let sumOddElement = 0;
+  let diff;
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] % 2 === 0) {
+      sumEvenElement = sumEvenElement + arr[i];
+    } else {
+      sumOddElement = sumOddElement + arr[i];
+    }
+  }
+  diff = sumEvenElement - sumEvenElement;
+  return diff;
 }
 
 function averageEvenElementsWorker(...arr) {
-
+  let sumEvenElement = 0;
+  let countEvenElement = 0;
+  let avgEven;
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] % 2 === 0) {
+      sumEvenElement = sumEvenElement + arr[i];
+      countEvenElement = countEvenElement + 1;
+    }
+  }
+  avgEven = sumEvenElement / countEvenElement;
+  return avgEven;
 }
 
 function makeWork (arrOfArr, func) {
