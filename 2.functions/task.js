@@ -22,7 +22,10 @@ function summElementsWorker(...arr) {
 }
 
 function differenceMaxMinWorker(...arr) {
-
+  let minimal = Math.max(...arr);
+  let maximal = Math.max(...arr);
+  let diff = maximal - minimal;
+  return diff;
 }
 
 function differenceEvenOddWorker(...arr) {
