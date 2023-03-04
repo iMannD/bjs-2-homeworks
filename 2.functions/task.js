@@ -29,7 +29,8 @@ function differenceMaxMinWorker(...arr) {
 }
 
 function differenceEvenOddWorker(...arr) {
-
+  let sumEvenElement = 0;
+  let sumOddElemtnt = 0;
 }
 
 function averageEvenElementsWorker(...arr) {
