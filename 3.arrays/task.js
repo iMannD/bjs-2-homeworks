@@ -6,5 +6,7 @@ function compareArrays(arr1, arr2) {
 }
 
 function getUsersNamesInAgeRange(users, gender) {
-  
+  let usersByGender = users.filter(user => user.gender === gender);
+  let usersAges = usersByGender.map(user => user.age);
+  let avg = usersAges.reduce()
 }
