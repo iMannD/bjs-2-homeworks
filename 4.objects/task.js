@@ -1,5 +1,8 @@
 function Student(name, gender, age) {
-  
+  name,
+  gender,
+  age,
+  marks = {},
 }
 
 Student.prototype.setSubject = function (subjectName) {
