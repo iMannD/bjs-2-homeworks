@@ -9,4 +9,11 @@ class PrintEditionItem {
     fix() {
         this.state = this.state * 1.5;
     }
+    set state(state) {
+        if (this.state < 0) {
+            return 0;
+        } else if (this.state > 100) {
+            return 100;
+        }
+    }   
 }
