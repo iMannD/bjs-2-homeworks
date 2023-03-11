@@ -19,5 +19,5 @@ class PrintEditionItem {
         }
     }   
 }   get state() {
-        return state._state;
+        return this._state;
 }
