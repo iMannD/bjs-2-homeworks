@@ -18,4 +18,6 @@ class PrintEditionItem {
             this._state = state;
         }
     }   
-}   
+}   get state() {
+        return state._state;
+}
