@@ -51,6 +51,7 @@ class Book extends PrintEditionItem {
         this.name = name;
         this.releaseDate = releaseDate;
         this.pagesCount = pagesCount;
+        this.author = author;
         this.state = 100;
         this.type = "book";
     }
