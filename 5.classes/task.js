@@ -46,3 +46,30 @@ class FantasticBook extends Book {
 class DetectiveBook extends Book {
     type = "detective";
 }
+
+
+class Library {
+    constructor (name, books) {
+        this.name = name;
+        books = [];
+    }
+    addBook(book) {
+        if (book.state > 30) {
+            books.push(book);
+        } 
+    }
+    findBookby (type, value) {
+        let bookFound;
+        for (let t in books) {
+            for (let v of books) {
+                if (t === type && v === value) {
+                    bookFound = true;
+                    return book;
+                }
+                if (bookFound = false) {
+                    return null;
+                }
+            }
+        }
+    }
+}
