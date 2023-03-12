@@ -35,4 +35,14 @@ class Book extends PrintEditionItem {
         this.author = author;
     }
 }
-class NovelBook 
+class NovelBook extends Book {
+    type = "novel";
+}
+
+class FantasticBook extends Book {
+    type = "fantastic";
+}
+
+class DetectiveBook extends Book {
+    type = "detective";
+}
