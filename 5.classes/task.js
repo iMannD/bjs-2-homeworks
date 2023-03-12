@@ -64,10 +64,16 @@ class Library {
             for (let t in books[i]) {
                 if (t === type && books[i][type] === value) {
                     return books[i];
-                } 
+                }
             }
- 
         }
         return null;
+    }
+    giveBookByName (name) {
+        for (let i = 0; i < books.length; i++) {
+            if (books[i].name === name) {
+                books.splice(i);
+            }
+        }
     }
 }
