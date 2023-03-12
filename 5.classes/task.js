@@ -60,9 +60,14 @@ class Library {
     }
     findBookby (type, value) {
         let bookFound;
-        for (let i = 0, i < books.length, i++) {
-            
+        for (let i = 0; i < books.length; i++) {
+            for (let t in books[i]) {
+                if (t === type && books[i][t] === value) {
+                    return books[i];
+                } 
+            }
+ 
         }
-    
+        return null;
     }
 }
