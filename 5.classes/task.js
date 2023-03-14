@@ -49,19 +49,19 @@ class DetectiveBook extends Book {
 class Library {
     constructor (name, books) {
         this.name = name;
-        books = [];
+        this.books = [];
     }
     addBook(book) {
         if (book.state > 30) {
-            books.push(book);
+            this.books.push(book);
         } 
     }
     findBookby (type, value) {
         let bookFound;
-        for (let i = 0; i < books.length; i++) {
-            for (let t in books[i]) {
-                if (t === type && books[i][type] === value) {
-                    return books[i];
+        for (let i = 0; i < this.books.length; i++) {
+            for (let t in this.books[i]) {
+                if (t === type && this.books[i][type] === value) {
+                    return this.books[i];
                 }
             }
         }
