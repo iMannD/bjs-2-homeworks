@@ -15,7 +15,7 @@ class PrintEditionItem {
         } else if (newState > 100) {
             this._state = 100;
         } else {
-            this._state = newStatestate;
+            this._state = newState;
         }
     }   
     get state() {
