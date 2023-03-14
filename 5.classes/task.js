@@ -10,9 +10,9 @@ class PrintEditionItem {
         this.state *= 1.5;
     }
     set state(newState) {
-        if (this.newState < 0) {
+        if (newState < 0) {
             this._state = 0;
-        } else if (this.newState > 100) {
+        } else if (newState > 100) {
             this._state = 100;
         } else {
             this._state = state;
