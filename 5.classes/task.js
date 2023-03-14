@@ -71,5 +71,6 @@ class Library {
                 return this.books.splice(i, 1);
             }
         }
+        return null;
     }
 }
