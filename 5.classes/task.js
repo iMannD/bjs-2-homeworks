@@ -7,7 +7,7 @@ class PrintEditionItem {
         this.type = null;
     }
     fix() {
-        this.state = this.state * 1.5;
+        this.state *= 1.5;
     }
     set state(state) {
         if (this.state < 0) {
@@ -72,7 +72,7 @@ class Library {
     giveBookByName (bookname) {
         for (let i = 0; i < books.length; i++) {
             if (books[i].name === bookname) {
-                books.splice(i);
+                books.splice(i, 1);
             }
         }
     }
