@@ -28,9 +28,10 @@ class Magazine extends PrintEditionItem {
 }
  
 class Book extends PrintEditionItem {
-    constructor(name, releaseDate, pagesCount, author) {
+    constructor(author, name, releaseDate, pagesCount) {
         super(name, releaseDate, pagesCount);
         this.author = author;
+        this.type = "book";
     }
 }
 class NovelBook extends Book {
@@ -56,7 +57,7 @@ class Library {
             this.books.push(book);
         } 
     }
-    findBookby (type, value) {
+    findBookBy (type, value) {
         let bookFound;
         for (let i = 0; i < this.books.length; i++) {
             if (this.books[i][type] === value) {
