@@ -47,7 +47,6 @@ function GetTriange (a, b, c) {
                 return 'Ошибка! Треугольник не существует';
             }
         }
-
+        return notTriange;
     }
-
 }
