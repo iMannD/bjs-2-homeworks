@@ -31,6 +31,7 @@ class triangle {
     get Area () {
         let hP = this.Perimeter ();
         let ar = Number(Math.sqrt(hP * (hP - this.a) * (hP - this.b) * (hp - this.c)));
-        return arr.toFixed(3);
+        return ar.toFixed(3);
     }
 }
+
