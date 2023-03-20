@@ -35,11 +35,11 @@ class Triangle {
     }
 }
 
-function GetTriange (a, b, c) {
+function GetTriangle (a, b, c) {
     try {
         return new Triangle (a, b, c);
     } catch(err) {
-        let notTriange = {
+        let errTriangle = {
             get Area() {
                 return 'Ошибка! Треугольник не существует';
             }
@@ -47,6 +47,6 @@ function GetTriange (a, b, c) {
                 return 'Ошибка! Треугольник не существует';
             }
         }
-        return notTriange;
+        return errTriangle;
     }
 }
