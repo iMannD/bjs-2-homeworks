@@ -8,7 +8,7 @@
 
 function validateCount(nn) {
     try {
-        return parseCount(nn)
+        return parseCount(nn);
     } catch (err) {
         return err;
     }
