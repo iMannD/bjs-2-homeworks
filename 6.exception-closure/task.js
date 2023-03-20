@@ -1,5 +1,5 @@
 ﻿function parseCount(cc) {
-    if (Number.parseFloat(cc) = NaN) {
+    if (Number.parseFloat(cc) === NaN) {
         throw new Error('Невалидное значение');
         return;
     }
