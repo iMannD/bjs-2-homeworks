@@ -3,7 +3,7 @@
         throw new Error("Невалидное значение");
         return;
     }
-return parseFloat(cc);
+return Number.parseFloat(cc);
 }
 
 function validateCount(nn) {
