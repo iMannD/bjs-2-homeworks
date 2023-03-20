@@ -5,3 +5,12 @@
     }
 return parseFloat(c);
 }
+
+function validateCount(n) {
+    try {
+        return parseCount(n)
+    } catch (err) {
+        return err;
+    }
+    return parseCount(n);
+}
