@@ -30,7 +30,7 @@ class Triangle {
     get area () {
         let pp = this.Perimeter / 2;
         let a = Number(Math.sqrt(pp * (pp - this.a) * (pp - this.b) * (pp - this.c)));
-        return a.toFixed(3);
+        return Number(a.toFixed(3));
     }
 }
 
@@ -41,7 +41,7 @@ function getTriangle (a, b, c) {
         let errTriangle = {
             get Area() {
                 return 'Ошибка! Треугольник не существует';
-            }
+            },
             get Perimeter() {
                 return 'Ошибка! Треугольник не существует';
             }
