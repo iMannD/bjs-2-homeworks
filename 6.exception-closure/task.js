@@ -12,7 +12,6 @@ function validateCount(num) {
     } catch (err) {
         return err;
     }
-    return parseCount(num);
 }
 
 
