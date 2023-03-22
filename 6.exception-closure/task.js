@@ -24,17 +24,17 @@ class Triangle {
         this.b = b;
         this.c = c;
     }
-    get Perimeter () {
+    get perimeter () {
         return this.a + this.b + this.c;
     }
-    get Area () {
+    get area () {
         let pp = this.Perimeter / 2;
         let a = Number(Math.sqrt(pp * (pp - this.a) * (pp - this.b) * (pp - this.c)));
         return a.toFixed(3);
     }
 }
 
-function GetTriangle (a, b, c) {
+function getTriangle (a, b, c) {
     try {
         return new Triangle (a, b, c);
     } catch(err) {
