@@ -17,6 +17,7 @@ class PrintEditionItem {
         } else {
             this._state = newState;
         }
+        
     }   
     get state() {
         return this._state;

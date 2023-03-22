@@ -1,18 +1,18 @@
-﻿function parseCount(cc) {
-    if (Number.parseFloat(cc) === NaN) {
+﻿function parseCount(num) {
+    let temp = Number.parseFloat(num)
+    if (isNaN(temp)) {
         throw new Error('Невалидное значение');
-        return;
     }
-    return Number.parseFloat(cc);
+    return temp;
 }
 
-function validateCount(nn) {
+function validateCount(num) {
     try {
-        return parseCount(nn);
+        return parseCount(num);
     } catch (err) {
         return err;
     }
-    return parseCount(nn);
+    return parseCount(num);
 }
 
 
