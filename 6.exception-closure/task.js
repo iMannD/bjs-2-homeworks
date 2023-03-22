@@ -39,10 +39,10 @@ function getTriangle (a, b, c) {
         return new Triangle (a, b, c);
     } catch(err) {
         let errTriangle = {
-            get Area() {
+            get area() {
                 return 'Ошибка! Треугольник не существует';
             },
-            get Perimeter() {
+            get perimeter() {
                 return 'Ошибка! Треугольник не существует';
             }
         }
