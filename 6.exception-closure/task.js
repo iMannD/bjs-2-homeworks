@@ -38,7 +38,7 @@ function getTriangle (a, b, c) {
     try {
         return new Triangle (a, b, c);
     } catch(err) {
-        let errTriangle = {
+        return {
             get area() {
                 return 'Ошибка! Треугольник не существует';
             },
@@ -46,6 +46,5 @@ function getTriangle (a, b, c) {
                 return 'Ошибка! Треугольник не существует';
             }
         }
-        return errTriangle;
     }
 }
