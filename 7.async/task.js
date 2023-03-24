@@ -30,10 +30,13 @@ class AlarmClock {
         if (this.intervalID) {
             return;
         }
-        this.alarmCollection.forEach(i)() = {
-            if (i = Date.now() && canCall === true) {
-                
-            } 
-        }
+        setInterval(() => {
+            this.alarmCollection.forEach(i)() = {
+                if (i = Date.now() && canCall === true) {
+                    this.alarmCollection.canCall = false;
+                    return callback();
+                } 
+            }
+        }, 1000);
     }
 }
