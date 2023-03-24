@@ -23,4 +23,17 @@ class AlarmClock {
             this.alarmCollection.splice(timeIndex, 1);
         }
     }
+    getCurrentFormattedTime() {
+        return Date.now();
+    }
+    start() {
+        if (this.intervalID) {
+            return;
+        }
+        this.alarmCollection.forEach(i)() = {
+            if (i = Date.now() && canCall === true) {
+                
+            } 
+        }
+    }
 }
