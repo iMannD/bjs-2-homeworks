@@ -3,12 +3,14 @@ class AlarmClock {
         this.alarmCollection = [];
         this.intervalID = null;
     }
-    addClock(time, funCallBack) {
+    addClock(alarmTime, funCallBack) {
         if (arguments.length < 2) {
             throw new Error('Отсутствуют обязательные аргументы')
         }
-
-
-        this.alarmCollection.push(newAlarm);
+        if (this.alarmCollection.includes(alarmTime) = false) {
+            this.alarmCollection.push(alarmTime);
+        } else {
+            console.warn('Уже присутствует звонок на это же время');
+        }
     }
 }
