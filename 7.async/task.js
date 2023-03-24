@@ -22,4 +22,5 @@ class AlarmClock {
         if (timeIndex > -1) {
             this.alarmCollection.splice(timeIndex, 1);
         }
-}   
+    }
+}
