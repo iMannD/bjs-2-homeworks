@@ -39,4 +39,8 @@ class AlarmClock {
             }
         }, 1000);
     }
+    stop() {
+        clearInterval(this.intervalID);
+        this.intervalID = null;
+    }
 }
