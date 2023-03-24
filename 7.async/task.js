@@ -30,7 +30,7 @@ class AlarmClock {
         if (this.intervalID) {
             return;
         }
-        setInterval(() => {
+        this.intervalID = setInterval(() => {
             this.alarmCollection.forEach(i)() = {
                 if (i = Date.now() && canCall === true) {
                     this.alarmCollection.canCall = false;
