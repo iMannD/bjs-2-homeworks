@@ -4,16 +4,16 @@ class AlarmClock {
         this.intervalID = null;
     }
     addClock(time, callback) {
-        if (arguments.length < 2) {
+        if (time == false || callback == false) {
             throw new Error('Отсутствуют обязательные аргументы');
         }
-        if (this.alarmCollection.includes(time)) {
+        if (this.alarmCollection.some(item => item.time === time)) {
             console.warn('Уже присутствует звонок на это же время');
         }
         this.alarmCollection.push({
             callback,
             time,
-            canCall = true,
+            canCall: true,
         });
     }
     removeClock(time) {
