@@ -20,7 +20,10 @@ class AlarmClock {
         this.alarmCollection = this.alarmCollection.filter(item => item.time !== time);
     }
     getCurrentFormattedTime() {
-        return Date.now();
+        return new Date().toLocaleTimeString("ru-Ru", {
+            hour: "2-digit",
+            minute: "2-digit",
+            });;
     }
     start() {
         if (this.intervalID) {
@@ -43,7 +46,7 @@ class AlarmClock {
         this.alarmCollection.forEach((i) => i.canCall = true);
     }
     clearAlarms() {
-        this.stop;
+        this.stop();
         this.alarmCollection = [];
     }
 }
