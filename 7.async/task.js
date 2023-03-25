@@ -17,11 +17,7 @@ class AlarmClock {
         });
     }
     removeClock(time) {
-        let timeIndex;
-        timeIndex = this.alarmCollection.indexOf(time);
-        if (timeIndex > -1) {
-            this.alarmCollection.splice(timeIndex, 1);
-        }
+        this.alarmCollection = this.alarmCollection.filter(item => item.time !== time);
     }
     getCurrentFormattedTime() {
         return Date.now();
