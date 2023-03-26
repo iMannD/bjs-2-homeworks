@@ -23,27 +23,27 @@ class AlarmClock {
         return new Date().toLocaleTimeString("ru-Ru", {
             hour: "2-digit",
             minute: "2-digit",
-            });;
+            });
     }
     start() {
         if (this.intervalID) {
             return;
         }
-        this.intervalID = setInterval(() => {
-            this.alarmCollection.forEach(i)() = {
-                if (i = Date.now() && canCall === true) {
+        this.intervalID = setInterval (() => {
+            this.alarmCollection.forEach(item => {
+                if (item.time = getCurrentFormattedTime() && canCall === true) {
                     this.alarmCollection.canCall = false;
-                    return callback();
-                } 
+                    return item.callback();
+                })
             }
-        }, 1000);
+        , 1000);
     }
     stop() {
         clearInterval(this.intervalID);
         this.intervalID = null;
     }
     resetAllCalls() {
-        this.alarmCollection.forEach((i) => i.canCall = true);
+        this.alarmCollection.forEach(i => i.canCall = true);
     }
     clearAlarms() {
         this.stop();
