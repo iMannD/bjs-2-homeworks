@@ -34,10 +34,10 @@ class AlarmClock {
                 if (item.time === this.getCurrentFormattedTime() && item.canCall === true) {
                     this.alarmCollection.item.canCall = false;
                     this.alarmCollection.item.callback();
-                })
-                
-            }
-        , 1000);
+                }
+            })
+        }, 1000);
+    
     }
     stop() {
         clearInterval(this.intervalId);
