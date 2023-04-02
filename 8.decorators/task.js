@@ -15,9 +15,9 @@ function cachingDecoratorNew(func) {
       }
   
       let result = func(...args); // в кеше результата нет — придётся считать
-      cache.push(???) ; // добавляем элемент с правильной структурой
+      cache.push({hash: md5(args), value: result}) ; // добавляем элемент с правильной структурой
       if (cache.length > 5) { 
-        ??? // если слишком много элементов в кеше, надо удалить самый старый (первый) 
+        cache.shift; 
       }
       console.log("Вычисляем: " + result);
       return "Вычисляем: " + result;  
