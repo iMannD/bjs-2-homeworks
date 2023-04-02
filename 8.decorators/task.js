@@ -1,7 +1,4 @@
 //Задача № 1
-function cachingDecoratorNew(func) {
-  
-}
 
 function cachingDecoratorNew(func) {
   let cache = [];
