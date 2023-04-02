@@ -27,7 +27,7 @@ function debounceDecoratorNew(func, delay) {
   
 
 
-function debounceDecoratorNew(func, ms) {  
+
   let timerId = null;
   function wrapper (...args){
     if (timerId === null) {
