@@ -26,15 +26,4 @@ function cachingDecoratorNew(func) {
 function debounceDecoratorNew(func, delay) {
   
 
-
-
-  let timerId = null;
-  function wrapper (...args){
-    if (timerId === null) {
-      func(...args);
-    }
-    clearTimeout(timerId);
-    timerId = setTimeout(() => timerId = null, ms);
-  }
-  return wrapper;
-} 
+  
