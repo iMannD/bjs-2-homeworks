@@ -12,7 +12,7 @@ function cachingDecoratorNew(func) {
       }
   
       let result = func(...args); // в кеше результата нет — придётся считать
-      cache.push({hash: md5(args), value: result}) ; // добавляем элемент с правильной структурой
+      cache.push({hash: hash, value: result}) ; // добавляем элемент с правильной структурой
       if (cache.length > 5) { 
         cache.shift(); 
       }
@@ -24,6 +24,6 @@ function cachingDecoratorNew(func) {
 
 //Задача № 2
 function debounceDecoratorNew(func, delay) {
-  
+  const showCoords = (x, y) => console.log('Клик:(${x},${y})');
 
-  
+}
