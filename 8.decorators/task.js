@@ -40,5 +40,6 @@ function debounceDecoratorNew(func, delay) {
   const delayedFunc = decorator(showCoords, 1000);
 
   console.time("time"); //(1)
-  
+
+  setTimeout(() =>delayedFunc(10, 5))
 }
