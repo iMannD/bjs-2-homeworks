@@ -25,5 +25,20 @@ function cachingDecoratorNew(func) {
 //Задача № 2
 function debounceDecoratorNew(func, delay) {
   const showCoords = (x, y) => console.log('Клик:(${x},${y})');
+  function decorator(f,ms) {
+    let timeout;
 
+    return function (...args) {
+      clearTimeout(timeout);
+
+      timeout = setTimeout(() => {
+        f.apply(this,args);
+        console.timeEnd("time"); //(2)
+      }, ms);
+    };
+  }
+  const delayedFunc = decorator(showCoords, 1000);
+
+  console.time("time"); //(1)
+  
 }
