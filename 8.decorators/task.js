@@ -23,23 +23,33 @@ function cachingDecoratorNew(func) {
   }
 
 //Задача № 2
-function debounceDecoratorNew(func, delay) {
-  const showCoords = (x, y) => console.log('Клик:(${x},${y})');
-  function decorator(f,ms) {
-    let timeout;
 
-    return function (...args) {
-      clearTimeout(timeout);
 
-      timeout = setTimeout(() => {
-        f.apply(this,args);
-        console.timeEnd("time"); //(2)
-      }, ms);
-    };
+
+function debounceDecoratorNew(func, ms) {
+  let timerId = null;
+  wrapper.count = 0;
+  wrapper.allCount = 0;
+
+  function wrapper(...args) {
+    clearTimeout(timerId);
+
+    if (timerId === null) {
+        func.apply(this, args);
+        wrapper.count++;
+    }
+
+    wrapper.allCount++;
+
+    timerId = setTimeout(() => {
+      if (args.length > 0) {
+        func.apply(this, args);
+        wrapper.count++;
+      }
+    }, ms);
   }
-  const delayedFunc = decorator(showCoords, 1000);
 
-  console.time("time"); //(1)
-
-  setTimeout(() =>delayedFunc(10, 5))
+  return wrapper;
 }
+
+
